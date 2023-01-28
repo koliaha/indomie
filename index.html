@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Indomie html5</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-logo">
+            <img src="./img/logo.png" alt="">
+        </div>
+        <div class="counter-box  messageBtn">
+            <div class="counter-first animate__animated frame0 inv message__top">
+                <div class="box-item box-left">
+                    <div class="goal">1</div>
+                    <div class="flag"><img src="./img/left.png" alt="left"></div>
+                    <div class="country">England</div>
+                </div>
+                <div class="box-item box-center">
+                    <div class="country">VS</div>
+                </div>
+                <div class="box-item box-left">
+                    <div class="goal">2</div>
+                    <div class="flag"><img src="./img/right.png" alt="right"></div>
+                    <div class="country">France</div>
+                </div>
+            </div>
+        </div>
+        <div class="product ">
+            <div class="animate__animated  inv header__second">
+                <div class="product_move "> </div>
+            </div>
+        </div>
+        <div class="text-ton ">
+            <div class="text-tony animate__animated  inv header__third">
+                Tonton Bola Kelas Dunia Bareng Indomie Hypeabis Kebab Rendang
+            </div>
+        </div>
+        <div class="counter-box second-match ">
+            <div class="counter-first animate__animated  inv forth__title">
+                <div class="box-item box-left">
+                    <div class="goal"></div>
+                    <div class="flag"><img src="./img/1.png" alt="left"></div>
+                    <div class="country">Argentina</div>
+                </div>
+                <div class="box-item box-center">
+                    <div class="country">VS</div>
+                </div>
+                <div class="box-item box-left">
+                    <div class="goal"></div>
+                    <div class="flag"><img src="./img/2.png" alt="right"></div>
+                    <div class="country">Croatia</div>
+                </div>
+            </div>
+        </div>
+        <div class="timer-wrapper animate__animated  inv forth__clock">
+            <div class="timer-list">
+                <div class="timer-item">
+                    <div class="timer-clock">
+                        <div class="timer-left day1">0</div>
+                        <div class="timer-right day2">0</div>
+                    </div>
+                    <div class="timer-name">Days</div>
+                </div>
+                <div class="timer-item">
+                    <div class="timer-clock">
+                        <div class="timer-left hour1">0</div>
+                        <div class="timer-right hour2">0</div>
+                    </div>
+                    <div class="timer-name">hours</div>
+                </div>
+                <div class="timer-item">
+                    <div class="timer-clock">
+                        <div class="timer-left min1">0</div>
+                        <div class="timer-right min2">0</div>
+                    </div>
+                    <div class="timer-name">minutes</div>
+                </div>
+                <div class="timer-item">
+                    <div class="timer-clock">
+                        <div class="timer-left sec1">0</div>
+                        <div class="timer-right sec2">0</div>
+                    </div>
+                    <div class="timer-name">seconds</div>
+                </div>
+            </div>
+        </div>
+        <div class="final-prod animate__animated  inv final__title">
+
+        </div>
+        <div class="final-link ">
+            <div class="link-final animate__animated  inv final__link">COBAIN SEKARANG</div>
+        </div>
+        <div class="footer-title">
+            #MixAsiksKelasDunia
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <script>
+        const frame4 = () => {
+            $('.header__third').addClass('inv')
+            $('.second-match').addClass('toleft')
+            $('.final__title').removeClass('inv')
+            $('.final__title').addClass('animate__zoomIn')
+            setTimeout(() => {
+                $('.final__link').removeClass('inv')
+                $('.final__link').addClass('animate__zoomIn')
+            }, 600);
+        }
+        const frame3 = () => {
+            $('.message__top').addClass('inv')
+            $('.forth__clock').removeClass('inv')
+            $('.forth__clock').addClass('animate__zoomIn')
+            setTimeout(() => {
+                $('.forth__title').removeClass('inv')
+                $('.forth__title').addClass('animate__fadeInUp')
+                setTimeout(() => {
+                    frame4()
+                }, 3000);
+            }, 1000);
+        }
+        const frame2 = () => {
+            $('.header__second').addClass('animate__fadeOutRight')
+            // $('.header__second').addClass('inv')
+            $('.header__third').addClass('animate__zoomIn')
+            $('.header__third').removeClass('inv')
+            setTimeout(() => {
+                frame3()
+            }, 3000);
+        }
+        const frame1 = () => {
+            // $('.frame0').addClass('inv')
+            $('.header__second').addClass('animate__fadeInLeft')
+            $('.header__second').removeClass('inv')
+            setTimeout(() => {
+                frame2()
+            }, 3000);
+        }
+        const frame0 = () => {
+            $('.message__top').addClass('animate__fadeInUp')
+            $('.message__top').removeClass('inv')
+            setTimeout(() => {
+                frame1()
+            }, 2100);
+        }
+        $(() => {
+            // Handler for .ready() called.
+            frame0()
+            // frame2()
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            clockUpdate();
+            setInterval(clockUpdate, 1000);
+        })
+
+        function clockUpdate() {
+            var date = new Date();
+
+            function addZero(x) {
+                if (x < 10) {
+                    return x = '0' + x;
+                } else {
+                    return x;
+                }
+            }
+
+            function twelveHour(x) {
+                if (x > 12) {
+                    return x = x - 12;
+                } else if (x == 0) {
+                    return x = 12;
+                } else {
+                    return x;
+                }
+            }
+
+            var d = addZero(date.getDate()).toString();
+            var h = addZero(twelveHour(date.getHours())).toString();
+            var m = addZero(date.getMinutes()).toString();
+            var s = addZero(date.getSeconds()).toString();
+            $('.day1').text(d[0])
+            $('.day2').text(d[1])
+            $('.hour1').text(h[0])
+            $('.hour2').text(h[1])
+            $('.min1').text(m[0])
+            $('.min2').text(m[1])
+            $('.sec1').text(s[0])
+            $('.sec2').text(s[1])
+        }
+    </script>
+</body>
+
+</html>
