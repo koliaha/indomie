@@ -15,6 +15,7 @@ body {
 
   position: relative;
   font-family: "Poppins";
+ 
 }
 
 .inv {
@@ -23,8 +24,8 @@ body {
 }
 
 .container {
-  width: 100%;
-  min-height: 100vh;
+  width: 414px;
+  height: 896px;
   position: relative;
   top: 0;
   left: 0;
@@ -122,6 +123,7 @@ body {
 }
 
 .text-ton {
+  width: 100%;
   font-size: 27px;
   line-height: 32px;
   position: absolute;
@@ -355,289 +357,7 @@ body {
   }
 }
 
-@media screen and (min-width:785px) {
 
-
-  .container {
-    background: url('./img/bg2.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    overflow: hidden;
-  }
-
-  .header-logo {
-    position: absolute;
-    left: 0;
-    top: 0;
-    max-width: 282px;
-  }
-
-  .header-logo img {
-    width: 100%;
-  }
-
-  .footer-title {
-    position: absolute;
-    bottom: 27px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 20px;
-    width: 100%;
-    color: #FFFFFF;
-    text-align: center;
-    text-shadow: 2px 0 #EA1F27, -2px 0 #EA1F27, 0 2px #EA1F27, 0 -2px #EA1F27,
-      1px 1px #EA1F27, -1px -1px #EA1F27, 1px -1px #EA1F27, -1px 1px #EA1F27;
-  }
-
-  .counter-box {}
-
-  .box-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 197px;
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  .box-item.box-center {
-    max-width: 37px;
-    min-width: auto;
-    margin: 0 15px;
-  }
-
-  .flag {
-    max-width: 164px;
-  }
-
-  .flag img {
-    width: 100%;
-  }
-
-  .goal {
-    font-size: 27px;
-    margin-bottom: 15px;
-  }
-
-  .country {
-    font-size: 27px;
-  }
-
-  .product {
-    /* max-width: 100%; */
-    position: absolute;
-    top: 375px;
-    max-width: 821px;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .product img {
-    width: 100%;
-  }
-
-  .text-ton {
-    width: 632.61px;
-    margin: 0 auto;
-    font-size: 42px;
-    line-height: 50px;
-    bottom: 160px;
-    z-index: 100;
-    text-align: center;
-  }
-
-  .second-match {
-    top: 385px;
-    max-width: 332px;
-    transition: 0.3s;
-  }
-
-  .second-match.toleft {
-    left: 30%;
-  }
-
-  .second-match .flag {
-    max-width: 122px;
-  }
-
-  .timer-wrapper {
-    position: absolute;
-    top: 175px;
-    width: 100%;
-    color: white;
-    text-transform: uppercase;
-  }
-
-  .timer-list {
-    display: flex;
-    justify-content: center;
-  }
-
-  .timer-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 6px;
-  }
-
-  .timer-clock {
-    display: flex;
-  }
-
-  .timer-name {
-    font-size: 28px;
-    margin-top: 10px;
-  }
-
-  .timer-clock div {
-    width: 74.43px;
-    height: 134px;
-    background: #FFFFFF;
-    border-radius: 6.46999px;
-    margin: 0 4px;
-    color: black;
-    font-size: 104px;
-    line-height: 134px;
-    text-align: center;
-    font-weight: 500;
-    position: relative;
-  }
-
-  .timer-clock div::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    transform: translateY(-50%);
-    height: 2px;
-    background: #CCCCCC;
-  }
-
-  .final-prod {
-    width: 470px;
-    position: absolute;
-    transform: none;
-    height: 400px;
-    background: url('./img/prodfinal2.png');
-    background-size: cover;
-  }
-
-
-
-  .final-link {}
-
-
-
-
-  .final__roll {
-    animation: finalRoll;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    -webkit-animation: finalRoll;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-timing-function: ease-in-out;
-    /* animation: name duration timing-function delay iteration-count direction forwards; */
-  }
-
-  .bg__animation {
-    animation: bgAnima;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    -webkit-animation: bgAnima;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-timing-function: ease-in-out;
-  }
-
-  @keyframes finalRoll {
-    0% {
-      transform: scale(0.85) rotate(330deg);
-    }
-
-    100% {
-      transform: scale(1) rotate(360deg);
-    }
-  }
-
-  @keyframes bgAnima {
-    0% {
-      transform: scale(1.07);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  }
-
-
-  @keyframes bgAnimaZoom {
-    0% {
-      transform: scale(1.07);
-    }
-
-    50% {
-      transform: scale(1);
-    }
-
-    100% {
-      transform: scale(1.07);
-    }
-  }
-
-  .handPush {
-    width: 50%;
-    opacity: 0;
-    animation: fadeIn 3s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-  }
-
-  .handPush img {
-    width: 100%;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
-
-  .d-none {
-    display: none;
-  }
-
-  .product_move {
-    width: 821px;
-    height: 530px;
-    background: url('./img/product2.png');
-    background-position: center center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-  }
-
-  @keyframes MoveUpDown {
-
-    0%,
-    100% {
-      top: 0;
-    }
-
-    50% {
-      top: 60px;
-    }
-  }
-}
 
 @media screen and (max-width:380px) {
   .header-logo {
@@ -714,7 +434,6 @@ body {
     font-size: 17px;
     line-height: 21px;
     bottom: 160px;
-    width: 85%;
   }
 
   .counter-box.second-match {
